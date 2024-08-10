@@ -11,7 +11,7 @@ enum Config {
   enum Keys {
     enum Plist {
       static let baseURL = "BASE_URL"
-      static let kakakoAppKey = "KAKAO_NATIVE_APP_KEY"
+      static let socketURL = "SOCKET_BASE_URL"
     }
   }
   
@@ -31,9 +31,9 @@ extension Config {
     return key
   }()
   
-  static let kakakoAppKey: String = {
-    guard let key = Config.infoDictionary[Keys.Plist.kakakoAppKey] as? String else {
-      fatalError("Kakao SDK KEy is not set in plist for this configuration.")
+  static let socketURL: String = {
+    guard let key = Config.infoDictionary[Keys.Plist.socketURL] as? String else {
+      fatalError("socketURL is not set in plist for this configuration.")
     }
     return key
   }()

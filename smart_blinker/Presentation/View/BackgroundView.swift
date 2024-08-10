@@ -8,13 +8,16 @@
 import SwiftUI
 
 public struct BackgroundView: View {
+  
+  @EnvironmentObject private var socket: SocketProvider
+  
   public var body: some View {
     ZStack {
       Image("background")
         .resizable()
         .aspectRatio(contentMode: .fit)
   
-      threeBlinkers()
+      threeBlinkers(data: socket.blinkersStatus)
       
       twoBlinkers()
       
@@ -26,77 +29,16 @@ public struct BackgroundView: View {
 private extension BackgroundView {
   
   @ViewBuilder
-  func threeBlinkers() -> some View {
-    
-    // 1
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(90))
-      .frame(width: 80, height: 18)
-      .offset(x: -445, y: 40)
-    
-    // 2
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(-90))
-      .frame(width: 80, height: 18)
-      .offset(x: -274, y: -40)
-    
-    // 3
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(0))
-      .frame(width: 80, height: 18)
-      .offset(x: -320, y: 84)
-    
-    // 4
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(180))
-      .frame(width: 80, height: 18)
-      .offset(x: -400, y: -84)
-   
-    // 5
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(90))
-      .frame(width: 80, height: 18)
-      .offset(x: 44, y: 40)
-    
-    // 6
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(-90))
-      .frame(width: 80, height: 18)
-      .offset(x: 214, y: -40)
-    
-    // 7
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(0))
-      .frame(width: 80, height: 18)
-      .offset(x: 166, y: 84)
-    
-    // 8
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(180))
-      .frame(width: 80, height: 18)
-      .offset(x: 86, y: -84)
-    
-    // 9
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(90))
-      .frame(width: 80, height: 18)
-      .offset(x: 530, y: 40)
-    
-    // 10
-    Image("threeColorRed")
-      .resizable()
-      .rotationEffect(.degrees(-90))
-      .frame(width: 80, height: 18)
-      .offset(x: 460, y: -40)
+  func threeBlinkers(data: [LiveBlinkersDTO]) -> some View {
+    ForEach(data) { data in
+      let positionData = getThreeBlinker(id: data.id)
+      
+      statusToBlinkerImage(status: data.status)
+        .resizable()
+        .frame(width: 80, height: 18)
+        .rotationEffect(positionData.angle)
+        .offset(x: positionData.offsetX, y: positionData.offsetY)
+    }
   }
   
   @ViewBuilder

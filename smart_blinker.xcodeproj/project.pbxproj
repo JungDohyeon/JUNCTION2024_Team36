@@ -23,6 +23,10 @@
 		CDF15D322C67A0AB007DE747 /* CarHumanProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D312C67A0AB007DE747 /* CarHumanProviderView.swift */; };
 		CDF15D352C67C3FF007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D342C67C3FF007DE747 /* Alamofire */; };
 		CDF15D372C67CD35007DE747 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D362C67CD35007DE747 /* BackgroundView.swift */; };
+		CDF15D3F2C67E465007DE747 /* SocketProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D3E2C67E465007DE747 /* SocketProvider.swift */; };
+		CDF15D422C67E588007DE747 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D412C67E588007DE747 /* Starscream */; };
+		CDF15D442C67E7A6007DE747 /* LiveBlinkersDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D432C67E7A6007DE747 /* LiveBlinkersDTO.swift */; };
+		CDF15D462C67E90F007DE747 /* ThreeColorBlinker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D452C67E90F007DE747 /* ThreeColorBlinker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,11 @@
 		CDF15D2F2C679E69007DE747 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDF15D312C67A0AB007DE747 /* CarHumanProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHumanProviderView.swift; sourceTree = "<group>"; };
 		CDF15D362C67CD35007DE747 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		CDF15D382C67E297007DE747 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		CDF15D3B2C67E321007DE747 /* smart-blinker-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "smart-blinker-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CDF15D3E2C67E465007DE747 /* SocketProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketProvider.swift; sourceTree = "<group>"; };
+		CDF15D432C67E7A6007DE747 /* LiveBlinkersDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveBlinkersDTO.swift; sourceTree = "<group>"; };
+		CDF15D452C67E90F007DE747 /* ThreeColorBlinker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreeColorBlinker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF15D352C67C3FF007DE747 /* Alamofire in Frameworks */,
+				CDF15D422C67E588007DE747 /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +69,7 @@
 		CDF15CE72C674EEA007DE747 = {
 			isa = PBXGroup;
 			children = (
+				CDF15D382C67E297007DE747 /* Development.xcconfig */,
 				CDF15D142C67534E007DE747 /* Config.swift */,
 				CDF15CF22C674EEA007DE747 /* smart_blinker */,
 				CDF15CF12C674EEA007DE747 /* Products */,
@@ -76,6 +87,7 @@
 		CDF15CF22C674EEA007DE747 /* smart_blinker */ = {
 			isa = PBXGroup;
 			children = (
+				CDF15D3B2C67E321007DE747 /* smart-blinker-Info.plist */,
 				CDF15D1F2C6755E6007DE747 /* Util */,
 				CDF15D1D2C6755CF007DE747 /* Injected */,
 				CDF15D182C675591007DE747 /* Domain */,
@@ -149,6 +161,8 @@
 		CDF15D192C67559F007DE747 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CDF15D432C67E7A6007DE747 /* LiveBlinkersDTO.swift */,
+				CDF15D452C67E90F007DE747 /* ThreeColorBlinker.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				CDF15D2D2C679E2A007DE747 /* RoadViewModel.swift */,
+				CDF15D3E2C67E465007DE747 /* SocketProvider.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,6 +271,7 @@
 			name = smart_blinker;
 			packageProductDependencies = (
 				CDF15D342C67C3FF007DE747 /* Alamofire */,
+				CDF15D412C67E588007DE747 /* Starscream */,
 			);
 			productName = smart_blinker;
 			productReference = CDF15CF02C674EEA007DE747 /* smart_blinker.app */;
@@ -287,6 +303,7 @@
 			mainGroup = CDF15CE72C674EEA007DE747;
 			packageReferences = (
 				CDF15D332C67C3FF007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CDF15D402C67E588007DE747 /* XCRemoteSwiftPackageReference "Starscream" */,
 			);
 			productRefGroup = CDF15CF12C674EEA007DE747 /* Products */;
 			projectDirPath = "";
@@ -314,8 +331,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF15D462C67E90F007DE747 /* ThreeColorBlinker.swift in Sources */,
 				CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */,
 				CDF15D302C679E69007DE747 /* ContentView.swift in Sources */,
+				CDF15D3F2C67E465007DE747 /* SocketProvider.swift in Sources */,
 				CDF15D372C67CD35007DE747 /* BackgroundView.swift in Sources */,
 				CDF15D322C67A0AB007DE747 /* CarHumanProviderView.swift in Sources */,
 				CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */,
@@ -325,6 +344,7 @@
 				CDF15D0F2C6752E8007DE747 /* NetworkError.swift in Sources */,
 				CDF15D2C2C679E22007DE747 /* RoadView.swift in Sources */,
 				CDF15D102C6752E8007DE747 /* BaseService.swift in Sources */,
+				CDF15D442C67E7A6007DE747 /* LiveBlinkersDTO.swift in Sources */,
 				CDF15CF42C674EEA007DE747 /* smart_blinkerApp.swift in Sources */,
 				CDF15D2E2C679E2A007DE747 /* RoadViewModel.swift in Sources */,
 			);
@@ -463,6 +483,7 @@
 				DEVELOPMENT_TEAM = N8RU5UJH68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "smart-blinker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -496,6 +517,7 @@
 				DEVELOPMENT_TEAM = N8RU5UJH68;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "smart-blinker-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -550,6 +572,14 @@
 				minimumVersion = 5.9.1;
 			};
 		};
+		CDF15D402C67E588007DE747 /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.8;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -557,6 +587,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = CDF15D332C67C3FF007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		CDF15D412C67E588007DE747 /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDF15D402C67E588007DE747 /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
