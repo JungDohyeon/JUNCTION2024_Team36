@@ -27,7 +27,7 @@ final class SocketProvider: ObservableObject {
   private var useCase: requestBlinkersUseCaseImpl = requestBlinkersUseCaseImpl()
 
   init() { 
-    let serverURL = URL(string: "wss://zolang.site/ws-connection")!
+    let serverURL = URL(string: Config.socketURL)!
     var request = URLRequest(url: serverURL)
     request.timeoutInterval = 5
     socket = WebSocket(request: request)
