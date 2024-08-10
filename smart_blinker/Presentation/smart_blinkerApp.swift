@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct smart_blinkerApp: App {
+
+  @StateObject private var viewModel: RoadViewModel = RoadViewModel()
+  
   var body: some Scene {
     WindowGroup {
       ContentView()
+        .environmentObject(viewModel)
     }
   }
 }

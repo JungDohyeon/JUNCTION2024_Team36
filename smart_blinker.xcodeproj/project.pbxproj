@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CDF15CF42C674EEA007DE747 /* smart_blinkerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */; };
-		CDF15CF62C674EEA007DE747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15CF52C674EEA007DE747 /* ContentView.swift */; };
 		CDF15CF82C674EEB007DE747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CF72C674EEB007DE747 /* Assets.xcassets */; };
 		CDF15CFB2C674EEB007DE747 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */; };
 		CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D082C6752E8007DE747 /* NetworkResult.swift */; };
@@ -19,12 +18,15 @@
 		CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */; };
 		CDF15D152C67534E007DE747 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D142C67534E007DE747 /* Config.swift */; };
 		CDF15D282C679110007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D272C679110007DE747 /* Alamofire */; };
+		CDF15D2C2C679E22007DE747 /* RoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D2B2C679E22007DE747 /* RoadView.swift */; };
+		CDF15D2E2C679E2A007DE747 /* RoadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D2D2C679E2A007DE747 /* RoadViewModel.swift */; };
+		CDF15D302C679E69007DE747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D2F2C679E69007DE747 /* ContentView.swift */; };
+		CDF15D322C67A0AB007DE747 /* CarHumanProviderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D312C67A0AB007DE747 /* CarHumanProviderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CDF15CF02C674EEA007DE747 /* smart_blinker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = smart_blinker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = smart_blinkerApp.swift; sourceTree = "<group>"; };
-		CDF15CF52C674EEA007DE747 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDF15CF72C674EEB007DE747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		CDF15D082C6752E8007DE747 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -34,6 +36,10 @@
 		CDF15D0C2C6752E8007DE747 /* GeneralResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
 		CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		CDF15D142C67534E007DE747 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		CDF15D2B2C679E22007DE747 /* RoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadView.swift; sourceTree = "<group>"; };
+		CDF15D2D2C679E2A007DE747 /* RoadViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoadViewModel.swift; sourceTree = "<group>"; };
+		CDF15D2F2C679E69007DE747 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CDF15D312C67A0AB007DE747 /* CarHumanProviderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarHumanProviderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,7 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */,
-				CDF15CF52C674EEA007DE747 /* ContentView.swift */,
+				CDF15D2A2C679DC0007DE747 /* View */,
+				CDF15D292C679DBB007DE747 /* ViewModel */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -210,6 +217,24 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		CDF15D292C679DBB007DE747 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D2D2C679E2A007DE747 /* RoadViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CDF15D2A2C679DC0007DE747 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D2F2C679E69007DE747 /* ContentView.swift */,
+				CDF15D2B2C679E22007DE747 /* RoadView.swift */,
+				CDF15D312C67A0AB007DE747 /* CarHumanProviderView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -287,14 +312,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */,
+				CDF15D302C679E69007DE747 /* ContentView.swift in Sources */,
+				CDF15D322C67A0AB007DE747 /* CarHumanProviderView.swift in Sources */,
 				CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */,
 				CDF15D152C67534E007DE747 /* Config.swift in Sources */,
 				CDF15D122C6752E8007DE747 /* GeneralResponse.swift in Sources */,
 				CDF15D112C6752E8007DE747 /* BaseRouter.swift in Sources */,
 				CDF15D0F2C6752E8007DE747 /* NetworkError.swift in Sources */,
-				CDF15CF62C674EEA007DE747 /* ContentView.swift in Sources */,
+				CDF15D2C2C679E22007DE747 /* RoadView.swift in Sources */,
 				CDF15D102C6752E8007DE747 /* BaseService.swift in Sources */,
 				CDF15CF42C674EEA007DE747 /* smart_blinkerApp.swift in Sources */,
+				CDF15D2E2C679E2A007DE747 /* RoadViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
