@@ -70,10 +70,12 @@
 		CDF15CF22C674EEA007DE747 /* smart_blinker */ = {
 			isa = PBXGroup;
 			children = (
+				CDF15D1F2C6755E6007DE747 /* Util */,
+				CDF15D1D2C6755CF007DE747 /* Injected */,
+				CDF15D182C675591007DE747 /* Domain */,
+				CDF15D162C67556D007DE747 /* Presentation */,
+				CDF15D172C675589007DE747 /* Data */,
 				CDF15D062C675266007DE747 /* Network */,
-				CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */,
-				CDF15CF52C674EEA007DE747 /* ContentView.swift */,
-				CDF15CF72C674EEB007DE747 /* Assets.xcassets */,
 				CDF15CF92C674EEB007DE747 /* Preview Content */,
 			);
 			path = smart_blinker;
@@ -90,6 +92,8 @@
 		CDF15D062C675266007DE747 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				CDF15D212C67562D007DE747 /* Service */,
+				CDF15D202C675629007DE747 /* Router */,
 				CDF15D072C675287007DE747 /* Base */,
 			);
 			path = Network;
@@ -106,6 +110,106 @@
 				CDF15D082C6752E8007DE747 /* NetworkResult.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		CDF15D162C67556D007DE747 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */,
+				CDF15CF52C674EEA007DE747 /* ContentView.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		CDF15D172C675589007DE747 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D1A2C6755A6007DE747 /* Repositories */,
+				CDF15D192C67559F007DE747 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDF15D182C675591007DE747 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D1C2C6755C3007DE747 /* UseCases */,
+				CDF15D1B2C6755BD007DE747 /* Interfaces */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		CDF15D192C67559F007DE747 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CDF15D1A2C6755A6007DE747 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CDF15D1B2C6755BD007DE747 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		CDF15D1C2C6755C3007DE747 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		CDF15D1D2C6755CF007DE747 /* Injected */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Injected;
+			sourceTree = "<group>";
+		};
+		CDF15D1E2C6755D5007DE747 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15CF72C674EEB007DE747 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CDF15D1F2C6755E6007DE747 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D222C675644007DE747 /* Extension */,
+				CDF15D1E2C6755D5007DE747 /* Resources */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CDF15D202C675629007DE747 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		CDF15D212C67562D007DE747 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CDF15D222C675644007DE747 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
