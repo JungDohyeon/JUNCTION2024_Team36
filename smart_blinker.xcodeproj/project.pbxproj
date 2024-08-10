@@ -11,6 +11,8 @@
 		CDF15CF62C674EEA007DE747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15CF52C674EEA007DE747 /* ContentView.swift */; };
 		CDF15CF82C674EEB007DE747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CF72C674EEB007DE747 /* Assets.xcassets */; };
 		CDF15CFB2C674EEB007DE747 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */; };
+		CDF15D032C675237007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D022C675237007DE747 /* Alamofire */; };
+		CDF15D052C675237007DE747 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D042C675237007DE747 /* AlamofireDynamic */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF15D032C675237007DE747 /* Alamofire in Frameworks */,
+				CDF15D052C675237007DE747 /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +87,10 @@
 			dependencies = (
 			);
 			name = smart_blinker;
+			packageProductDependencies = (
+				CDF15D022C675237007DE747 /* Alamofire */,
+				CDF15D042C675237007DE747 /* AlamofireDynamic */,
+			);
 			productName = smart_blinker;
 			productReference = CDF15CF02C674EEA007DE747 /* smart_blinker.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = CDF15CE72C674EEA007DE747;
+			packageReferences = (
+				CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = CDF15CF12C674EEA007DE747 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,6 +291,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +321,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -344,6 +357,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CDF15D022C675237007DE747 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CDF15D042C675237007DE747 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDF15CE82C674EEA007DE747 /* Project object */;
 }
