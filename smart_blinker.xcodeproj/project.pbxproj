@@ -11,8 +11,6 @@
 		CDF15CF62C674EEA007DE747 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15CF52C674EEA007DE747 /* ContentView.swift */; };
 		CDF15CF82C674EEB007DE747 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CF72C674EEB007DE747 /* Assets.xcassets */; };
 		CDF15CFB2C674EEB007DE747 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */; };
-		CDF15D032C675237007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D022C675237007DE747 /* Alamofire */; };
-		CDF15D052C675237007DE747 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D042C675237007DE747 /* AlamofireDynamic */; };
 		CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D082C6752E8007DE747 /* NetworkResult.swift */; };
 		CDF15D0F2C6752E8007DE747 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D092C6752E8007DE747 /* NetworkError.swift */; };
 		CDF15D102C6752E8007DE747 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0A2C6752E8007DE747 /* BaseService.swift */; };
@@ -20,6 +18,7 @@
 		CDF15D122C6752E8007DE747 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0C2C6752E8007DE747 /* GeneralResponse.swift */; };
 		CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */; };
 		CDF15D152C67534E007DE747 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D142C67534E007DE747 /* Config.swift */; };
+		CDF15D252C6761C9007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D242C6761C9007DE747 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF15D032C675237007DE747 /* Alamofire in Frameworks */,
-				CDF15D052C675237007DE747 /* AlamofireDynamic in Frameworks */,
+				CDF15D252C6761C9007DE747 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,8 +227,7 @@
 			);
 			name = smart_blinker;
 			packageProductDependencies = (
-				CDF15D022C675237007DE747 /* Alamofire */,
-				CDF15D042C675237007DE747 /* AlamofireDynamic */,
+				CDF15D242C6761C9007DE747 /* Alamofire */,
 			);
 			productName = smart_blinker;
 			productReference = CDF15CF02C674EEA007DE747 /* smart_blinker.app */;
@@ -261,7 +258,7 @@
 			);
 			mainGroup = CDF15CE72C674EEA007DE747;
 			packageReferences = (
-				CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CDF15D232C6761C9007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = CDF15CF12C674EEA007DE747 /* Products */;
 			projectDirPath = "";
@@ -356,7 +353,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -413,7 +410,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -447,6 +444,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dohyeon.smart-blinker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -477,6 +477,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dohyeon.smart-blinker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -507,7 +510,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		CDF15D232C6761C9007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
@@ -518,15 +521,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		CDF15D022C675237007DE747 /* Alamofire */ = {
+		CDF15D242C6761C9007DE747 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			package = CDF15D232C6761C9007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		CDF15D042C675237007DE747 /* AlamofireDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = CDF15D012C675237007DE747 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
