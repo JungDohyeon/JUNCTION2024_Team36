@@ -16,14 +16,22 @@ final class RoadViewModel: ObservableObject {
   private let maxHuman: Int = 10
   private let maxCar: Int = 10
   
-  
   // MARK: Action
   enum Action {
     
+    // user Action
+    case tappedAddCarButton
+    case tappedAddHumanButton
+    
+    // Business Action
+    case _increaseHuman
+    case _decreaseHuman
+    case _increaseCar
+    case _decreaseCar
   }
   
-  // MARK: Excute
-  private func excute(_ action: Action) -> Void {
+  // MARK: Execute
+  private func execute(_ action: Action) -> Void {
     
   }
 }
