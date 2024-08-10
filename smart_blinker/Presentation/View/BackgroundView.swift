@@ -23,6 +23,9 @@ public struct BackgroundView: View {
       
       oneBlinkers()
     }
+    .onAppear {
+      socket.action(.viewWillAppear)
+    }
   }
 }
 

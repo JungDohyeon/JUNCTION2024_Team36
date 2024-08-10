@@ -12,14 +12,22 @@ public struct CarHumanProviderView: View {
   
   public var body: some View {
     VStack(spacing: 0) {
-      HStack {
-        Spacer()
-        
-        Text("Human: \(viewModel.humanCount), Cars: \(viewModel.carCount)")
-      }
+      Text("Human : \(viewModel.humanCount), Cars : \(viewModel.carCount)")
+        .font(.system(size: 16, weight: .bold))
+        .padding(.vertical, 10)
+        .padding(.horizontal, 40)
+        .background(
+          Capsule()
+            .fill(.white.opacity(0.3))
+            .overlay(
+              Capsule()
+                .stroke(.white.opacity(0.7))
+            )
+        )
       
       Spacer()
     }
+    .padding(32)
   }
 }
 

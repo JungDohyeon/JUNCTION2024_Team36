@@ -24,14 +24,35 @@ final class SocketProvider: ObservableObject {
   ]
   
   private var socket: WebSocket!
-  
-  init() {
-    let serverURL = URL(string: "wss://zolang.site/ws-connection")!
+  private var useCase: requestBlinkersUseCaseImpl = requestBlinkersUseCaseImpl()
+
+  init() { 
+    let serverURL = URL(string: Config.socketURL)!
     var request = URLRequest(url: serverURL)
     request.timeoutInterval = 5
     socket = WebSocket(request: request)
     socket.delegate = self
     socket.connect()
+  }
+  
+  enum Action {
+    case viewWillAppear
+    case _fetchInitData
+    case _connectionStart
+  }
+  
+  public func action(_ action: Action) -> Void {
+    switch action {
+    case .viewWillAppear:
+      self.action(._fetchInitData)
+      
+    case ._fetchInitData:
+      self.requsetInitBlinkers()
+      
+    case ._connectionStart:
+      return
+      
+    }
   }
 }
 
@@ -88,5 +109,21 @@ extension SocketProvider: WebSocketDelegate {
   func subscribe(to destination: String) {
     let subscribeFrame = "SUBSCRIBE\nid:sub-0\ndestination:\(destination)\n\n\u{00}"
     socket.write(string: subscribeFrame)
+  }
+}
+
+private extension SocketProvider {
+  
+  func requsetInitBlinkers() {
+    useCase.requestInit() { response in
+      switch(response) {
+      case let .success(data):
+        print(data)
+        self.blinkersStatus = data
+        
+      case let .failure(error):
+        print(error.localizedDescription)
+      }
+    }
   }
 }
