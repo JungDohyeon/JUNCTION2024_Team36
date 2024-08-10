@@ -11,11 +11,13 @@ import SwiftUI
 struct smart_blinkerApp: App {
 
   @StateObject private var viewModel: RoadViewModel = RoadViewModel()
+  @StateObject private var socket: SocketProvider = SocketProvider()
   
   var body: some Scene {
     WindowGroup {
       ContentView()
         .environmentObject(viewModel)
+        .environmentObject(socket)
     }
   }
 }
