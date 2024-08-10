@@ -13,6 +13,13 @@
 		CDF15CFB2C674EEB007DE747 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */; };
 		CDF15D032C675237007DE747 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D022C675237007DE747 /* Alamofire */; };
 		CDF15D052C675237007DE747 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = CDF15D042C675237007DE747 /* AlamofireDynamic */; };
+		CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D082C6752E8007DE747 /* NetworkResult.swift */; };
+		CDF15D0F2C6752E8007DE747 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D092C6752E8007DE747 /* NetworkError.swift */; };
+		CDF15D102C6752E8007DE747 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0A2C6752E8007DE747 /* BaseService.swift */; };
+		CDF15D112C6752E8007DE747 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0B2C6752E8007DE747 /* BaseRouter.swift */; };
+		CDF15D122C6752E8007DE747 /* GeneralResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0C2C6752E8007DE747 /* GeneralResponse.swift */; };
+		CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */; };
+		CDF15D152C67534E007DE747 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D142C67534E007DE747 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +28,13 @@
 		CDF15CF52C674EEA007DE747 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CDF15CF72C674EEB007DE747 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CDF15D082C6752E8007DE747 /* NetworkResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		CDF15D092C6752E8007DE747 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		CDF15D0A2C6752E8007DE747 /* BaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		CDF15D0B2C6752E8007DE747 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		CDF15D0C2C6752E8007DE747 /* GeneralResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralResponse.swift; sourceTree = "<group>"; };
+		CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		CDF15D142C67534E007DE747 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +53,7 @@
 		CDF15CE72C674EEA007DE747 = {
 			isa = PBXGroup;
 			children = (
+				CDF15D142C67534E007DE747 /* Config.swift */,
 				CDF15CF22C674EEA007DE747 /* smart_blinker */,
 				CDF15CF12C674EEA007DE747 /* Products */,
 			);
@@ -55,6 +70,7 @@
 		CDF15CF22C674EEA007DE747 /* smart_blinker */ = {
 			isa = PBXGroup;
 			children = (
+				CDF15D062C675266007DE747 /* Network */,
 				CDF15CF32C674EEA007DE747 /* smart_blinkerApp.swift */,
 				CDF15CF52C674EEA007DE747 /* ContentView.swift */,
 				CDF15CF72C674EEB007DE747 /* Assets.xcassets */,
@@ -69,6 +85,27 @@
 				CDF15CFA2C674EEB007DE747 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CDF15D062C675266007DE747 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D072C675287007DE747 /* Base */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CDF15D072C675287007DE747 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				CDF15D0B2C6752E8007DE747 /* BaseRouter.swift */,
+				CDF15D0A2C6752E8007DE747 /* BaseService.swift */,
+				CDF15D0C2C6752E8007DE747 /* GeneralResponse.swift */,
+				CDF15D092C6752E8007DE747 /* NetworkError.swift */,
+				CDF15D0D2C6752E8007DE747 /* NetworkLogger.swift */,
+				CDF15D082C6752E8007DE747 /* NetworkResult.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,7 +185,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */,
+				CDF15D0E2C6752E8007DE747 /* NetworkResult.swift in Sources */,
+				CDF15D152C67534E007DE747 /* Config.swift in Sources */,
+				CDF15D122C6752E8007DE747 /* GeneralResponse.swift in Sources */,
+				CDF15D112C6752E8007DE747 /* BaseRouter.swift in Sources */,
+				CDF15D0F2C6752E8007DE747 /* NetworkError.swift in Sources */,
 				CDF15CF62C674EEA007DE747 /* ContentView.swift in Sources */,
+				CDF15D102C6752E8007DE747 /* BaseService.swift in Sources */,
 				CDF15CF42C674EEA007DE747 /* smart_blinkerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
