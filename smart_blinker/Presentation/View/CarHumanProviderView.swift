@@ -26,6 +26,22 @@ public struct CarHumanProviderView: View {
         )
       
       Spacer()
+      
+      HStack(spacing: 28) {
+        Button {
+          viewModel.action(.tappedAddCarButton)
+        } label: {
+          Image("addCarButton")
+        }
+
+        Button {
+          viewModel.action(.tappedAddHumanButton)
+        } label: {
+          Image("addHumanButton")
+        }
+        
+        Spacer()
+      }
     }
     .padding(32)
   }

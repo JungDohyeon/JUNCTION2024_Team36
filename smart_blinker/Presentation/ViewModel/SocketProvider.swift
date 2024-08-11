@@ -23,10 +23,12 @@ final class SocketProvider: ObservableObject {
     .init(id: 10, status: 0)
   ]
   
+  public static var shared = SocketProvider()
+  
   private var socket: WebSocket!
   private var useCase: requestBlinkersUseCaseImpl = requestBlinkersUseCaseImpl()
 
-  init() { 
+  init() {
     let serverURL = URL(string: Config.socketURL)!
     var request = URLRequest(url: serverURL)
     request.timeoutInterval = 5
