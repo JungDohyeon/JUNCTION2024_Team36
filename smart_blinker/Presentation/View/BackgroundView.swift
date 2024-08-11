@@ -9,6 +9,7 @@ import SwiftUI
 
 public struct BackgroundView: View {
   
+  @EnvironmentObject private var viewModel: RoadViewModel
   @EnvironmentObject private var socket: SocketProvider
   
   public var body: some View {
@@ -16,15 +17,32 @@ public struct BackgroundView: View {
       Image("background")
         .resizable()
         .aspectRatio(contentMode: .fit)
-  
+      
       threeBlinkers(data: socket.blinkersStatus)
       
       twoBlinkers()
       
       oneBlinkers()
+      
+      ForEach(viewModel.cars, id: \.self) { car in
+        Image(car.color)
+          .resizable()
+          .frame(width: 40, height: 73)
+          .rotationEffect(Angle(degrees: 90))
+          .offset(x: car.offsetX, y: car.offsetY)
+      }
+      
+      ForEach(viewModel.reverseCars, id: \.self) { car in
+        Image(car.color)
+          .resizable()
+          .frame(width: 40, height: 73)
+          .rotationEffect(Angle(degrees: -90))
+          .offset(x: car.offsetX, y: car.offsetY)
+      }
     }
     .onAppear {
       socket.action(.viewWillAppear)
+      viewModel.action(.startTimer)
     }
   }
 }

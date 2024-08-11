@@ -32,6 +32,7 @@
 		CDF15D522C6803DF007DE747 /* DefaultBlinkersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D512C6803DF007DE747 /* DefaultBlinkersRepository.swift */; };
 		CDF15D542C680402007DE747 /* BlinkersRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D532C680402007DE747 /* BlinkersRepository.swift */; };
 		CDF15D562C680463007DE747 /* requestBlinkersUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D552C680463007DE747 /* requestBlinkersUseCase.swift */; };
+		CDF15D582C681C09007DE747 /* CarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF15D572C681C08007DE747 /* CarData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		CDF15D512C6803DF007DE747 /* DefaultBlinkersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultBlinkersRepository.swift; sourceTree = "<group>"; };
 		CDF15D532C680402007DE747 /* BlinkersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkersRepository.swift; sourceTree = "<group>"; };
 		CDF15D552C680463007DE747 /* requestBlinkersUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = requestBlinkersUseCase.swift; sourceTree = "<group>"; };
+		CDF15D572C681C08007DE747 /* CarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 			children = (
 				CDF15D432C67E7A6007DE747 /* LiveBlinkersDTO.swift */,
 				CDF15D452C67E90F007DE747 /* ThreeColorBlinker.swift */,
+				CDF15D572C681C08007DE747 /* CarData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 			files = (
 				CDF15D462C67E90F007DE747 /* ThreeColorBlinker.swift in Sources */,
 				CDF15D542C680402007DE747 /* BlinkersRepository.swift in Sources */,
+				CDF15D582C681C09007DE747 /* CarData.swift in Sources */,
 				CDF15D522C6803DF007DE747 /* DefaultBlinkersRepository.swift in Sources */,
 				CDF15D4E2C68032E007DE747 /* BlinkersRouter.swift in Sources */,
 				CDF15D132C6752E8007DE747 /* NetworkLogger.swift in Sources */,
